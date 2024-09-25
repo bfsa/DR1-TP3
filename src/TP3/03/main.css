@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+    --primary-color: #00180d;
+    --primary-color-dark: #949101;
+    --text-contrast-color: #fff;
+    --text-color: #181818;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--text-contrast-color);
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    min-width: 0;
+    width: 40px;
+    border-radius: 2px;
+    order: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-desktop ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-desktop a {
+    color: var(--text-contrast-color);
+    text-decoration: none;
+}
+
+.menu-mobile {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 250px;
+    max-width: 50%;
+    color: var(--text-color);
+    background-color: rgb(29, 240, 117);
+    padding: 20px;
+    box-shadow: -2px 0 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-mobile ul {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.menu-mobile a {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.close-menu-btn {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.menu-toggle-btn {
+    background-color: transparent;
+    color: var(--text-contrast-color);
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.menu-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .header-content {
+        padding: 10px 55px;
+    }
+
+    .logo {
+      order: 0;
+    }
+
+    .menu-desktop {
+        display: flex;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .menu-toggle-btn {
+        display: none;
+    }
+}

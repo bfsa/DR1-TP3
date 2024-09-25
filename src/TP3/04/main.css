@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+:root {
+
+  --primary-color: #00180d;
+  --primary-color-dark: #949101;
+  --primary-color-light: rgb(29, 240, 117);
+  --text-contrast-color: #fff;
+  --text-color: #181818;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--text-contrast-color);
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  min-width: 0;
+  width: 40px;
+  border-radius: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+.desktop-navigation ul,
+.mobile-navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.desktop-navigation a,
+.mobile-navigation a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.mobile-navigation {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+  color: var(--text-contrast-color);
+  background-color: var(--primary-color-light);
+  padding: 10px;
+  width: 100%;
+}
+
+.mobile-navigation span {
+  transform: translateY(20%);
+  padding-right: 10px;
+}
+
+.mobile-navigation ul {
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.menu-toggle-btn {
+  background-color: transparent;
+  color: var(--text-contrast-color);
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.close-menu-btn {
+  background-color: transparent;
+  color: var(--text-contrast-color);
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+
+  .desktop-navigation {
+      display: flex;
+  }
+
+  .header-container {
+      padding: 15px 65px;
+  }
+
+  .menu-toggle-btn {
+    display: none;
+}
+
+  .mobile-navigation {
+      display: none;
+  }
+
+
+}

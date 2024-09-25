@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+
+}
+
+:root {
+  --primary-color: #00180d;
+  --primary-color-dark: #949101;
+  --text-contrast-color: #fff;
+}
+
+
+body {
+  font-family: sans-serif;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-contrast-color);
+}
+
+.navbar-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  min-width: 0;
+  width: 40px;
+  border-radius: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-menu {
+  width: 100%;
+  order: 1;
+}
+
+.mobile-menu ul {
+  padding-top: 20px;
+}
+
+.navbar-content ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar-content a {
+  color: var(--text-contrast-color);
+  text-decoration: none;
+}
+
+.toggle-button {
+  background-color: transparent;
+  color: var(--text-contrast-color);
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-content {
+      padding: 20px 65px;
+  }
+
+  .desktop-menu {
+      display: flex;
+  }
+
+  .mobile-menu {
+      display: none;
+  }
+
+  .toggle-button {
+      display: none;
+  }
+}
